@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script
+      async
+      src="https://kit.fontawesome.com/b786c7caa4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="module" src="src/js/controller.js"></script>
+    <title>
+      Paracomer: Encuentra el sitio adecuado para tu platillo deseado
+    </title>
+  </head>
+  <body>
+    <section id="home">
+      <header id="header">
+        <nav id="nav">
+          <a href="index.html"
+            ><img src="src/img/logo-nobg.png" alt="Paracomer" id="logo"
+          /></a>
+          <ul>
+            <li><a href="#" class="about">About Us</a></li>
+            <li><a href="https://github.com/NicolasPalacioM">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="header-content">
+          <div class="container">
+            <h1>¿Qué vas a comer hoy?</h1>
+            <p>
+              ¡Busca y descubre la variedad de restaurantes que tiene para
+              ofrecer tu ciudad!
+            </p>
+            <form id="search" class="search">
+              <div class="search_bar">
+                <div class="icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <i class="fa-solid fa-circle-notch spinner off"></i>
+                </div>
+                <input
+                  type="text"
+                  class="search_bar-field"
+                  placeholder="Search for your desired dish or restaurant"
+                />
+              </div>
+              <button class="btn-main search_btn">Buscar</button>
+            </form>
+          </div>
+        </div>
+        <div class="attributions">
+          <p>
+            Designed by
+            <a href="https://www.freepik.es/vectores/comida">freepik.</a>
+          </p>
+        </div>
+      </header>
+
+      <section id="categories" class="container py-2">
+        <h2 class="section-title content_title">Categories</h2>
+        <div class="suggestions">
+          <ul>
+            <li>
+              <div class="object" data-type="burger">
+                <img src="src/img/burger.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="object" data-type="pizza">
+                <img src="src/img/pizza.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="object" data-type="chicken wings">
+                <img src="src/img/chicken-wings.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="object" data-type="seafood">
+                <img src="src/img/seafood.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="object" data-type="asian">
+                <img src="src/img/asian.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="object" data-type="italian">
+                <img src="src/img/italian.jpg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="attributions">
+          <p>
+            Designed by
+            <a href="https://www.freepik.es/fotos/carne-hamburguesa"
+              >stockking,</a
+            ><a href="https://www.freepik.es/fotos/pollo-frito"> jcomp,</a
+            ><a href="https://www.freepik.es/fotos/paella">dashu83, </a
+            ><a href="https://www.freepik.es/fotos/wok">timolina.</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="top" class="container py-2">
+        <h2 class="section-title content_title">
+          Top restaurants around the world
+        </h2>
+        <div class="suggestions">
+          <ul>
+            <li>
+              <div class="object" data-id="1945657">
+                <img src="src/img/geranium.jpg" alt="" />
+                <h3>Geranium</h3>
+              </div>
+            </li>
+            <li>
+              <div class="object" data-id="1798176">
+                <img src="src/img/central.jpg" alt="" />
+                <h3>Central</h3>
+              </div>
+            </li>
+            <li>
+              <div class="object" data-id="7281314">
+                <img src="src/img/disfrutar.jpg" alt="" />
+                <h3>Disfrutar</h3>
+              </div>
+            </li>
+            <li>
+              <div class="object" data-id="7179537">
+                <img src="src/img/diverxo.jpg" alt="" />
+                <h3>Diverxo</h3>
+              </div>
+            </li>
+            <li>
+              <div class="object" data-id="800423">
+                <img src="src/img/pujol.jpg" alt="" />
+                <h3>Pujol</h3>
+              </div>
+            </li>
+            <li>
+              <div class="object" data-id="3416001">
+                <img src="src/img/asador-etxebarri.jpg" alt="" />
+                <h3>Lido 84</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="random">
+        <div></div>
+        <div class="random_food">
+          <h2 class="section-title">No sé qué comer</h2>
+          <p class="lead">
+            Si tu apetito está en duda o simplemente quieres explorar nuevas
+            opciones. Pulsa aquí abajo y asómbrate con la variedad de
+            preparaciones que tu ciudad tiene para ofrecer.
+          </p>
+          <button class="btn-main random">Sorpréndeme</button>
+        </div>
+        <div class="attributions">
+          <p>
+            Designed by
+            <a href="https://www.freepik.es/vectores/comida">catalyststuff,</a
+            ><a href="https://www.freepik.es/vectores/letras"> rawpixel.com.</a>
+          </p>
+        </div>
+      </section>
+
+      <footer id="main-footer" class="p-2">
+        <div class="footer-container">
+          <div class="logo-container">
+            <img src="src/img/logo-red-white.png" alt="Paracomer" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+              consectetur quaerat ad earum, neque harum exercitationem sed minus
+              est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
+              quis unde facilis vel, repellat officiis numquam corporis cumque
+              nulla saepe atque quas.
+            </p>
+          </div>
+          <div>
+            <h3>Site links</h3>
+            <ul class="list">
+              <li><a href="https://github.com/NicolasPalacioM">Help & Support</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Privacy Policy</a></li>
+              <li><a href="#" class="about">About Us</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Copyright &copy; 2022 All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <section id="results" class="off">
+      <header id="header">
+        <nav id="nav" class="nav-results">
+          <a href="index.html"
+            ><img src="src/img/logo-nobg.png" alt="Paracomer" id="logo"
+          /></a>
+          <form id="search" class="search_bar">
+            <input
+              type="text"
+              class="search_bar-field"
+              placeholder="Search for your desired dish or restaurant"
+            />
+            <button class="search_bar-button">
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-circle-notch spinner off"></i>
+              </div>
+            </button>
+          </form>
+          <ul>
+            <li><a href="# " class="about">About Us</a></li>
+            <li><a href="index.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- find the perfect place with a delicious taste -->
+      <section id="results-display">
+        <div class="results-container container py-2">
+          <div class="results-info">
+            <div>
+              <h2 class="section-title">
+                Results for <span class="query"></span>
+              </h2>
+              <p class="quant"></p>
+            </div>
+
+            <div class="location">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Bucaramanga, Santander, Colombia</p>
+            </div>
+          </div>
+          <div class="search_filters">
+            <div class="table py-2">
+              <h2 class="content_title">Filter by:</h2>
+              <div class="item">
+                <h3>Availability</h3>
+                <div class="filter-by">
+                  <img src="src/img/checkbox.png" class="checked" />
+                  <input class="filter_checkbox" type="checkbox" name="0" />
+                  <label for="0" class="label">
+                    <p>Open now</p>
+                    <div></div>
+                  </label>
+                </div>
+              </div>
+              <!-- <div class="item">
+                <h3>Type of Food</h3>
+                <div class="filter-by">
+                  <input class="filter_checkbox" type="checkbox" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Breakfast</p>
+                  </label>
+                </div>
+
+                <div class="filter-by">
+                  <input class="filter_checkbox" type="checkbox" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Lunch</p>
+                  </label>
+                </div>
+                <div class="filter-by">
+                  <input class="filter_checkbox" type="checkbox" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Dinner</p>
+                  </label>
+                </div>
+              </div> -->
+              <div class="item">
+                <h3>Rating</h3>
+                <div class="filter-by">
+                  <img src="src/img/checkbox.png" class="checked" />
+                  <input class="filter_checkbox" type="checkbox" name="1" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Highest first</p>
+                  </label>
+                </div>
+                <div class="filter-by">
+                  <img src="src/img/checkbox.png" class="checked" />
+                  <input class="filter_checkbox" type="checkbox" name="2" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Lowest first</p>
+                  </label>
+                </div>
+              </div>
+              <div class="item">
+                <h3>Price</h3>
+                <div class="filter-by">
+                  <img src="src/img/checkbox.png" class="checked" />
+                  <input class="filter_checkbox" type="checkbox" name="-1" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Highest first</p>
+                  </label>
+                </div>
+                <div class="filter-by">
+                  <img src="src/img/checkbox.png" class="checked" />
+                  <input class="filter_checkbox" type="checkbox" name="-2" />
+                  <label for="filter_checkbox" class="label">
+                    <p>Lowest first</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search_results">
+            <div class="results_list"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="main-footer" class="p-2">
+        <div class="footer-container">
+          <div class="logo-container">
+            <img src="src/img/logo-red-white.png" alt="Paracomer" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+              consectetur quaerat ad earum, neque harum exercitationem sed minus
+              est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
+              quis unde facilis vel, repellat officiis numquam corporis cumque
+              nulla saepe atque quas.
+            </p>
+          </div>
+          <div>
+            <h3>Site links</h3>
+            <ul class="list">
+              <li><a href="https://github.com/NicolasPalacioM">Help & Support</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Privacy Policy</a></li>
+              <li><a href="#" class="about">About Us</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Copyright &copy; 2022 All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <section id="restaurant" class="off">
+      <header id="header">
+        <nav id="nav" class="nav-results">
+          <a href="index.html"
+            ><img src="src/img/logo-nobg.png" alt="Paracomer" id="logo"
+          /></a>
+          <form id="search" class="search_bar">
+            <input
+              type="text"
+              class="search_bar-field"
+              placeholder="Search for your desired dish or restaurant"
+            />
+            <button class="search_bar-button">
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-circle-notch spinner off"></i>
+              </div>
+            </button>
+          </form>
+          <ul>
+            <li><a href="#" class="about">About us</a></li>
+            <li><a href="https://github.com/NicolasPalacioM">Contact us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="rest-display"></section>
+
+      <footer id="main-footer" class="p-2">
+        <div class="footer-container">
+          <div class="logo-container">
+            <img src="src/img/logo-red-white.png" alt="Paracomer" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+              consectetur quaerat ad earum, neque harum exercitationem sed minus
+              est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
+              quis unde facilis vel, repellat officiis numquam corporis cumque
+              nulla saepe atque quas.
+            </p>
+          </div>
+          <div>
+            <h3>Site links</h3>
+            <ul class="list">
+              <li><a href="https://github.com/NicolasPalacioM">Help & Support</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Privacy Policy</a></li>
+              <li><a href="#" class="about">About Us</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Copyright &copy; 2022 All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+    
+    <section id="about" class="off">
+      <header id="header">
+        <nav id="nav" class="nav-results">
+          <a href="index.html"
+            ><img src="src/img/logo-nobg.png" alt="Paracomer" id="logo"
+          /></a>
+  
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="index.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </header>
+  
+      <section id="about" class="container py-2">
+        <h2 class="section-title">About this project</h2>
+        <div class="about-img my-1">
+          <!-- <img class="py-1" src="src/img/about-wallpaper.jpg" alt="" /> -->
+          <div class="attributions">
+            <p>
+              Designed by
+              <a href="https://www.freepik.es/fotos/textura-parquet">fwstudio.</a>
+            </p>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          illum facilis totam! Et rerum doloribus beatae dolore, vitae inventore
+          illo non quidem quia? Ipsum praesentium tempora atque et aperiam!
+          Praesentium maiores, repellendus similique officia ad nam voluptatibus
+          adipisci omnis obcaecati, dignissimos nihil excepturi? Earum quo
+          laudantium dolor quaerat enim dolorum obcaecati adipisci rem in autem
+          doloribus qui rerum sed voluptates quos, perspiciatis, neque,
+          necessitatibus voluptas eveniet error. Debitis totam nobis similique!
+          Eos, optio inventore repellat impedit nemo et quis, neque eaque sed,
+          explicabo dignissimos vitae temporibus numquam commodi nam non quisquam
+          obcaecati ipsum eum illo magnam asperiores reiciendis! Culpa, quis.
+        </p>
+        <h3 class="dev">
+          Nicolás Palacio, Frontend Dev <i class="fa-solid fa-code"></i>
+        </h3>
+  
+        <code></></code>
+        <div class="buttons">
+          <a href="https://github.com/NicolasPalacioM" class="btn github"
+            ><i class="fab fa-github"></i> Github</a
+          >
+          <a href="https://github.com/NicolasPalacioM" class="btn linkedin"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+        </div>
+      </section>
+  
+      <!-- <button class="random">
+        <a href="index.html">
+          <img src="src/img/random_button.png" alt="" />
+        </a>
+      </button> -->
+  
+      <footer id="main-footer" class="p-2">
+        <div class="footer-container">
+          <div class="logo-container">
+            <img src="src/img/logo-red-white.png" alt="Paracomer" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+              consectetur quaerat ad earum, neque harum exercitationem sed minus
+              est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
+              quis unde facilis vel, repellat officiis numquam corporis cumque
+              nulla saepe atque quas.
+            </p>
+          </div>
+          <div>
+            <h3>Site links</h3>
+            <ul class="list">
+              <li><a href="https://github.com/NicolasPalacioM">Help & Support</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Privacy Policy</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="https://github.com/NicolasPalacioM">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Copyright &copy; 2022 All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

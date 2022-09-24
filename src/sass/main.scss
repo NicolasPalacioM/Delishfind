@@ -1,0 +1,278 @@
+@import 'config';
+@import 'utilities';
+@import 'about';
+@import 'results';
+@import 'restaurant';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 154px;
+  height: 40px;
+}
+
+//Nav
+
+#nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: $main-color;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      padding: 0.5rem 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s;
+
+      &:hover {
+        border-color: $tertiary-color;
+      }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #fff;
+  border: 2px solid $medium-color;
+  border-right-color: transparent;
+  border-radius: 2px;
+
+  &-field {
+    background-color: transparent;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .fa-solid {
+    color: $medium-color;
+  }
+}
+
+.spinner {
+  animation: rotate 0.8s infinite linear;
+  color: $medium-color;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Header
+
+#header {
+  position: relative;
+  .header-content {
+    display: flex;
+    justify-content: center;
+    background: $bg-image no-repeat center center / cover;
+    height: 90vh;
+    padding: 13%;
+    color: $dark-color;
+    text-align: center;
+
+    #search-field {
+      margin: 1rem;
+      width: 60%;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Section: categories
+
+%images-list {
+  display: flex;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    line-height: 1.5;
+    .object {
+      padding-right: 1rem;
+      cursor: pointer;
+
+      img {
+        height: 9rem;
+        border-radius: 10%;
+      }
+    }
+  }
+}
+
+#categories,
+#top {
+  position: relative;
+
+  .suggestions {
+    @extend %images-list;
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+
+// #top {
+//   .image_top {
+//     @extend %images-list;
+
+//     h3 {
+//       font-size: 1.6rem;
+//     }
+
+//     .rating {
+//       display: flex;
+
+//       i {
+//         font-size: 1.4rem;
+//       }
+//     }
+//     .fa-arrow-alt-circle-right {
+//       margin-left: -2rem;
+//       margin-top: 3rem;
+//       z-index: 1;
+//     }
+//   }
+// }
+
+// Random-button section
+
+#random {
+  position: relative;
+  background: url('../img/random_button-bg.png') no-repeat left center/cover;
+  display: flex;
+  align-items: center;
+  height: 600px;
+
+  div {
+    flex: 1;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .random_food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 22rem;
+    text-align: center;
+    margin-right: 2rem;
+    padding: 0 4rem;
+    border-radius: 50%;
+  }
+}
+
+#main-footer {
+  background-color: $dark-color;
+  color: $light-color;
+
+  a {
+    color: #fff;
+    font-size: 1rem;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    grid-gap: 1rem;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-right: 1px solid #444;
+
+      img {
+        height: auto;
+        width: 50%;
+        padding-right: 1rem;
+      }
+
+      p {
+        padding-top: 2rem;
+      }
+    }
+
+    & > *:last-child {
+      background: $semi-dark-color;
+      grid-column: 1 / span 2;
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+  }
+}

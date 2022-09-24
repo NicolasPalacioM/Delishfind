@@ -1,0 +1,22 @@
+{
+  "name": "paracomer",
+  "version": "1.0.0",
+  "description": "",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist/dir ./dist",
+    "sass": "node-sass --w src/sass/ --o test-dist/src/ --recursive"
+  },
+  "dependencies": {
+    "core-js": "^3.18.1",
+    "parcel": "^2.0.1",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.42.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2"
+  }
+}

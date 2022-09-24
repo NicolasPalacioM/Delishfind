@@ -1,0 +1,158 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  @extend %btn-shared;
+  color: #f4f4f4;
+
+  &-main {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+  }
+}
+
+button[class^='btn']:hover,
+a[class^='btn']:hover,
+input[class^='btn']:hover {
+  background-color: $main-color;
+}
+
+.select {
+  @extend %btn-shared;
+  border: 2px $dark-color solid;
+  padding: 0.6rem 1rem;
+}
+
+.lead {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+.p {
+  &-1 {
+    padding: 1rem;
+  }
+
+  &-2 {
+    padding: 2rem;
+  }
+}
+
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.list {
+  li {
+    padding: 0.4rem 0;
+    border-bottom: #555 dotted 1px;
+    width: 90%;
+
+    &a:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.table {
+  background-color: #fff;
+  color: $dark-color;
+  padding: 1rem 2rem;
+
+  .item {
+    margin-bottom: 10px;
+  }
+}
+
+.content_title {
+  margin-bottom: 10px;
+  color: $main-color;
+}
+
+.location {
+  display: flex;
+  i {
+    margin-right: 10px;
+    color: $main-color;
+  }
+}
+
+.fa-star,
+.fa-star-half-stroke {
+  color: $main-color;
+}
+
+.off {
+  display: none !important;
+}
+
+.rest-website {
+  color: $main-color;
+  text-decoration: underline $main-color;
+}
+
+.attributions {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  z-index: 2;
+}
