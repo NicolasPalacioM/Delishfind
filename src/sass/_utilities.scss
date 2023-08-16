@@ -3,6 +3,11 @@
   padding: 0 1.5rem;
   margin: auto;
   overflow: hidden;
+
+  @media (min-width: 280px) and (max-width: 952px) {
+    padding: 0 1rem !important;
+    margin: 2rem auto;
+  }
 }
 
 %btn-shared {
@@ -86,7 +91,7 @@ input[class^='btn']:hover {
     margin: 1rem 0;
   }
   &-2 {
-    margin: 2rem 0;
+    margin: 2rem 0 !important;
   }
   &-3 {
     margin: 3rem 0;
@@ -116,10 +121,30 @@ input[class^='btn']:hover {
 .table {
   background-color: #fff;
   color: $dark-color;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
 
   .item {
     margin-bottom: 10px;
+  }
+
+  .close-modal {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    font-size: 2rem;
+    color: $dark-color;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &-hover {
+      color: $medium-color;
+    }
+
+    @media (min-width: 280px) and (max-width: 952px) {
+      display: inline;
+    }
   }
 }
 
@@ -155,4 +180,8 @@ input[class^='btn']:hover {
   left: 5px;
   bottom: 5px;
   z-index: 2;
+
+  @media (max-width: 952px) {
+    display: none;
+  }
 }

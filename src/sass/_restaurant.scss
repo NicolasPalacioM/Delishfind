@@ -33,6 +33,14 @@
   gap: 1.5rem;
   margin-top: 1rem;
 
+  @media (min-width: 280px) and (max-width: 600px) {
+    display: block;
+
+    .figure {
+      margin: 1rem 0;
+    }
+  }
+
   .figure {
     padding: 1rem 1.5rem;
     border: 1px solid $medium-color;

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=488px, maximum-scale=1.0" />
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,7 +64,7 @@
                   placeholder="Search for your desired dish or restaurant"
                 />
               </div>
-              <button class="btn-main search_btn">Buscar</button>
+              <button class="btn-main search_btn">Search</button>
             </form>
           </div>
         </div>
@@ -170,9 +171,9 @@
       </section>
 
       <section id="random">
-        <div></div>
+        <div class="filler"></div>
         <div class="random_food">
-          <h2 class="section-title">I don't know what to eat</h2>
+          <h2 class="section-title">Surprise Me!</h2>
           <p class="lead">
             If your appetite is in doubt or you simply want to explore new options. Click below and prepare to be amazed by the variety of dishes available in your city.
           </p>
@@ -187,11 +188,11 @@
         </div>
       </section>
 
-      <footer id="main-footer" class="p-2">
+      <footer id="main-footer">
         <div class="footer-container">
           <div class="logo-container">
             <img src="src/img/logo-red-white.png" alt="Paracomer" />
-            <p>
+            <p class="page-summary">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
               consectetur quaerat ad earum, neque harum exercitationem sed minus
               est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
@@ -251,13 +252,17 @@
               <p class="quant"></p>
             </div>
 
-            <div class="location">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Bucaramanga, Santander, Colombia</p>
+            <div class="results-details">
+                <button class="btn-main filter-btn"><i class="fa-solid fa-sort"></i>Filters</button>
+              <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Bucaramanga, Santander, Colombia</p>
+              </div>
             </div>
           </div>
           <div class="search_filters">
-            <div class="table py-2">
+            <div class="table">
+              <span class="close-modal">&times;</span>
               <h2 class="content_title">Filter by:</h2>
               <div class="item">
                 <h3>Availability</h3>
@@ -270,28 +275,6 @@
                   </label>
                 </div>
               </div>
-              <!-- <div class="item">
-                <h3>Type of Food</h3>
-                <div class="filter-by">
-                  <input class="filter_checkbox" type="checkbox" />
-                  <label for="filter_checkbox" class="label">
-                    <p>Breakfast</p>
-                  </label>
-                </div>
-
-                <div class="filter-by">
-                  <input class="filter_checkbox" type="checkbox" />
-                  <label for="filter_checkbox" class="label">
-                    <p>Lunch</p>
-                  </label>
-                </div>
-                <div class="filter-by">
-                  <input class="filter_checkbox" type="checkbox" />
-                  <label for="filter_checkbox" class="label">
-                    <p>Dinner</p>
-                  </label>
-                </div>
-              </div> -->
               <div class="item">
                 <h3>Rating</h3>
                 <div class="filter-by">
@@ -329,16 +312,17 @@
             </div>
           </div>
           <div class="search_results">
-            <div class="results_list"></div>
+            <div class="results_list">
+            </div>
           </div>
         </div>
       </section>
 
-      <footer id="main-footer" class="p-2">
+      <footer id="main-footer">
         <div class="footer-container">
           <div class="logo-container">
             <img src="src/img/logo-red-white.png" alt="Paracomer" />
-            <p>
+            <p class="page-summary">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
               consectetur quaerat ad earum, neque harum exercitationem sed minus
               est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
@@ -390,11 +374,11 @@
 
       <section id="rest-display"></section>
 
-      <footer id="main-footer" class="p-2">
+      <footer id="main-footer">
         <div class="footer-container">
           <div class="logo-container">
             <img src="src/img/logo-red-white.png" alt="Paracomer" />
-            <p>
+            <p class="page-summary">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
               consectetur quaerat ad earum, neque harum exercitationem sed minus
               est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore
@@ -444,17 +428,7 @@
           </div>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          illum facilis totam! Et rerum doloribus beatae dolore, vitae inventore
-          illo non quidem quia? Ipsum praesentium tempora atque et aperiam!
-          Praesentium maiores, repellendus similique officia ad nam voluptatibus
-          adipisci omnis obcaecati, dignissimos nihil excepturi? Earum quo
-          laudantium dolor quaerat enim dolorum obcaecati adipisci rem in autem
-          doloribus qui rerum sed voluptates quos, perspiciatis, neque,
-          necessitatibus voluptas eveniet error. Debitis totam nobis similique!
-          Eos, optio inventore repellat impedit nemo et quis, neque eaque sed,
-          explicabo dignissimos vitae temporibus numquam commodi nam non quisquam
-          obcaecati ipsum eum illo magnam asperiores reiciendis! Culpa, quis.
+          Delishfind is a full front-end app. It was built with HTML5, SASS, CSS, and Vanilla Javascript. Its search functionality is powered by travel advisor rest api, which provides information about restaurant all around the world. The app will let you search for restaurants within the city you are in and will allow you to visualize the exact location of every restaurant through real-time maps implemented with the leaftlet JS library. 
         </p>
         <h3 class="dev">
           Nicolás Palacio, Frontend Dev <i class="fa-solid fa-code"></i>
@@ -477,11 +451,11 @@
         </a>
       </button> -->
   
-      <footer id="main-footer" class="p-2">
+      <footer id="main-footer">
         <div class="footer-container">
           <div class="logo-container">
             <img src="src/img/logo-red-white.png" alt="Paracomer" />
-            <p>
+            <p class="page-summary">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
               consectetur quaerat ad earum, neque harum exercitationem sed minus
               est! Nam deleniti, assumenda magnam incidunt ex obcaecati dolore

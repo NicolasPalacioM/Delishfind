@@ -4,6 +4,14 @@ import greyBg from 'url:../../img/grey-bg.jpg';
 class ResultsView extends View {
   _parentElement = document.querySelector('.results_list');
   _parentFilt = document.querySelector('.table');
+  _searchFilter = document.querySelector('.search_filters');
+  _closeFilter = document.querySelector('.close-modal');
+  _openFilter = document.querySelector('.filter-btn');
+
+  constructor() {
+    super();
+    this.addHandlerShowFilters();
+  }
 
   addHandlerClick(handler) {
     this._parentElement.addEventListener('click', function (e) {
@@ -25,6 +33,19 @@ class ResultsView extends View {
       const { name } = check;
       handler(name, check.checked);
     });
+  }
+
+  addHandlerShowFilters() {
+    this._openFilter.addEventListener('click', this._showFilters.bind(this));
+    this._closeFilter.addEventListener('click', this._hideFilters.bind(this));
+  }
+
+  _showFilters() {
+    this._searchFilter.style.display = 'block';
+  }
+
+  _hideFilters() {
+    this._searchFilter.style.display = 'none';
   }
 
   _template(data) {

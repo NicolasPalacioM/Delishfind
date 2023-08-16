@@ -109,5 +109,6 @@ const init = function () {
   homeView.addHandlerRdm(controlResultsRdm);
   aboutView.addHandlerAbout(controlAbout);
 };
+console.log('apsps');
 
 init();

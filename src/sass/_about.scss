@@ -1,4 +1,10 @@
 #about {
+  min-height: 75vh;
+
+  .container {
+    padding: 4rem 1rem;
+  }
+
   .section-title {
     color: $main-color;
   }
@@ -6,6 +12,11 @@
     position: relative;
     background: url('../img/about-wallpaper.jpg') no-repeat center center/cover;
     height: 399.64px;
+
+    @media (min-width: 280px) and (max-width: 952px) {
+      background: url('../img/about-wallpaper-crop.png') no-repeat center
+        center/cover;
+    }
   }
   .github {
     background-color: $github-color;
