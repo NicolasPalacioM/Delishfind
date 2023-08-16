@@ -1,5 +1,4 @@
 .parcel-cache
 node_modules
-dist
 pages
 test-dist
